@@ -5,7 +5,6 @@ import {
   offset,
   Placement,
   shift,
-  size,
   useDismiss,
   useFloating,
   useFocus,
@@ -37,13 +36,6 @@ const Tooltip = ({
       offset(12),
       flip(),
       shift(),
-      size({
-        apply({ elements, rects }) {
-          Object.assign(elements.floating.style, {
-            width: `${rects.reference.width}px`,
-          });
-        },
-      }),
     ],
   });
 
